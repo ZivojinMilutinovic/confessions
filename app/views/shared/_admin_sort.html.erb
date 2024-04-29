@@ -1,0 +1,17 @@
+<% if current_user&.is_admin? %>
+
+
+<form class="max-w-md mx-auto flex justify-between items-stretch mb-5" method="get">
+  <label for="status" class="sr-only">Underline select</label>
+  <select id="status" name="status" class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+      <option value="all" <%= 'selected' if params[:status].blank? || params[:status] == 'all' %>>All</option>
+      <option value="approved"  <%= 'selected' if params[:status] == 'approved' %>>Approved</option>
+      <option value="rejected"  <%= 'selected' if params[:status] == 'rejected' %>>Rejected</option>
+      <option value="pending"  <%= 'selected' if params[:status] == 'pending' %>>Pending</option>
+  </select>
+  <button type="submit" class= "self-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 ml-3 mt-2  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Filter</button>
+</form>
+
+
+
+<% end %>

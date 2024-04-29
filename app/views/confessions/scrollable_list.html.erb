@@ -1,0 +1,6 @@
+<% if @confessions.present? %>
+        <%= turbo_frame_tag "confessions-page-#{@pagy.page}", class: 'flex-grow w-full mt-2' do %>
+                <%= render partial: "confession", collection: @confessions %>
+                <%= render partial: "next_page" %>
+        <% end %>
+<% end %>

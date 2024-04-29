@@ -1,0 +1,51 @@
+<div data-controller="confessions" class="flex-grow w-full mt-2 ">
+    <div class=" border-r border-b border-t border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+        <div class="mb-6">
+        <div class="flex justify-between">
+            <div class = "text-sm text-slate-800"> <%= format_categories(confession.categories) %></div>
+            <div class="text-sm text-gray-600 text-right">
+                <%= confession.created_at.strftime("%B %d, %Y") %>
+            </div>
+        </div>
+        <div class="text-gray-900 font-bold text-xl mb-2">
+            <div class="break-all"><%= confession.title %></div>
+            <% if confession.challenge_id.present? %>
+                <span class="bg-indigo-100 text-indigo-800 mb-2 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-indigo-900 dark:text-indigo-300 align-middle">Challenge</span>
+            <% end %>
+
+            <%= render partial: 'shared/status_badge', locals: { status: confession.status } %>
+        </div>
+        <p class="text-gray-700 text-base break-all"><%= confession.body %></p>
+        </div>
+        <div class="flex items-center text-sm">
+            <div class="flex items-center space-x-4">
+                 <!-- Comments button -->
+                <button data-action="click->confessions#viewComments" class = "comment-confession-button text-gray-600" data-id = "<%= confession.id %>">
+                    <div class="flex items-center bg-gray-100 rounded-md px-2 py-1">
+                        <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                            <path d="M18 0H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3.546l3.2 3.659a1 1 0 0 0 1.506 0L13.454 14H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-8 10H5a1 1 0 0 1 0-2h5a1 1 0 1 1 0 2Zm5-4H5a1 1 0 0 1 0-2h10a1 1 0 1 1 0 2Z"/>
+                        </svg>
+                        <span class="text-gray-500 text-sm ml-2"><%= confession.number_of_comments %></span>
+                    </div>
+                </button>
+
+                <!-- Likes button -->
+                <%= render partial: 'like_button', locals: { data_id: confession.id, likes: confession.likes, data_typeaction: "confessions" } %>
+
+                <!-- Dislikes button -->
+                <%= render partial: 'dislike_button', locals: { data_id: confession.id, dislikes: confession.dislikes, data_typeaction: "confessions" } %>
+
+                <%= render partial: 'shared/delete_button', locals: { path: confession_path(confession) } %>
+                <%= render partial: 'shared/approve_button', locals: { path: approve_confession_path(id: confession.id, status: :approved), method: 'Approve' } %> 
+                <%= render partial: 'shared/approve_button', locals: { path: approve_confession_path(id: confession.id, status: :rejected), method: 'Reject' } %> 
+                <%= render partial: 'shared/approve_button', locals: { path: approve_confession_path(id: confession.id, status: :pending), method: 'Pending' } %> 
+            </div>
+        </div>
+        <div  data-confessions-target="comments" class = "hidden mt-2">
+                <%= render partial: 'comments/new_comment_form', locals: { confession_id: confession.id } %>
+                <div id = "<%= 'comments_' + confession.id.to_s %>">
+                        <%= render 'shared/spinner' %>
+                </div>
+        </div>
+    </div>
+</div>

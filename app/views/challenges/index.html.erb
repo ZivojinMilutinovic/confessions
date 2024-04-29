@@ -1,0 +1,5 @@
+<% content_for :main_content do %>
+    <ol class="mx-3 relative border-s border-gray-200 dark:border-gray-700"> 
+        <%= render partial: "challenge", collection: @challenges %>
+    </ol>
+<%end%>

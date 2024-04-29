@@ -1,0 +1,14 @@
+<% if @pagy.next.present? %>
+  <%= turbo_frame_tag(
+        "confessions-page-#{@pagy.next}",
+        # autoscroll: true,
+        loading: :lazy,
+        src: pagy_url_for(@pagy, @pagy.next),
+        target: "_top",
+        class: 'flex-grow w-full mt-2'
+      ) do %>
+      <%= render 'shared/spinner' %>
+  <% end %>
+  <% else %>
+  <br>
+<% end %>

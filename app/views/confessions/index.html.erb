@@ -1,0 +1,35 @@
+<% content_for :main_content do %>
+    <% if @confession_id.present? %>
+        <%= render partial: 'shared/banner_1' %>
+    <% end %>
+
+    <% if @show_search %>
+        <div class = "container px-0 sm:px-5 mb-5">
+            <%= render partial: 'search_confessions', locals: { categories: @categories, category_name: @category_name, category_id: @category_id } %>
+        </div>
+    <% end %>
+
+    <%= render partial: 'shared/admin_sort' %>
+
+
+    <!-- Infinite scroll WITHOUT BUTTON -->
+    <div id="confessions" class="container mx-auto px-0 sm:px-5 flex flex-col items-center">
+        <%= render partial: "confession", collection: @confessions %>
+        <%= render partial: "next_page" %>
+    </div>
+
+    <% if @confessions.blank? %>
+            <h1 class="mt-5 mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">No confessions found</h1>
+    <% end %>
+
+    
+    <!-- Ovaj blok necemo da renderujemo -->
+    <% if false %>
+        <div id="confessions" class="container mx-auto px-5 flex flex-col items-center">
+            <%= render @confessions %>
+        </div>
+        <div class="mt-2" id="next_link">
+            <%= button_to "Load More", pagy_url_for(@pagy, @pagy.next), {class: 'text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'} %>
+        </div>
+    <% end %>
+<%end%>

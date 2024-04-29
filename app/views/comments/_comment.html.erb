@@ -1,0 +1,22 @@
+<div class="bg-gray-100 p-2 rounded-lg mb-4">
+    <div class = "flex justify-between">
+        <div>
+            <div>        <span class="text-sm text-gray-600 text-right"><%= comment.created_at.strftime("%B %d, %Y") %></span></div>
+            <p class="text-gray-800"><%= comment.body %></p>
+            <%= render partial: 'shared/status_badge', locals: { status: comment.status } %>
+        </div>
+    </div>
+    <!-- Additional comment details (author, date, etc.) can be added here -->
+    <div class="flex mt-2">
+        <%= render partial: 'confessions/like_button', locals: { data_id: comment.id, likes: comment.likes, data_typeaction: "comments" } %>
+        <%= render partial: 'confessions/dislike_button', locals: { data_id: comment.id, dislikes: comment.dislikes, data_typeaction: "comments" } %>
+        <%= render partial: 'shared/delete_button', locals: { path: "comments/#{comment.id}" } %>
+        <div class="mx-1">&nbsp;</div>
+        <%= render partial: 'shared/approve_button', locals: { path: approve_comment_path(id: comment.id, status: :approved), method: 'Approve' } %> 
+        <div class="mx-1">&nbsp;</div>
+        <%= render partial: 'shared/approve_button', locals: { path: approve_comment_path(id: comment.id, status: :rejected), method: 'Reject' } %> 
+        <div class="mx-1">&nbsp;</div>
+        <%= render partial: 'shared/approve_button', locals: { path: approve_comment_path(id: comment.id, status: :pending), method: 'Pending' } %> 
+    </div>
+    <!--  <button class="text-gray-500 mt-2">Reply</button> -->
+</div>

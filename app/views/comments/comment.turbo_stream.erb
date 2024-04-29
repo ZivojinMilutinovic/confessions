@@ -1,0 +1,7 @@
+<%= turbo_stream.append 'comments' + @confession_id  do %>
+  <%= render partial: "comment", collection: @comments %>
+<% end %>
+
+<% if @has_next %>
+    <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded" data-action="click->confessions#loadMoreCommentsForConfession">Load More</button>
+<% end %>

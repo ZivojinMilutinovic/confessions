@@ -1,0 +1,4 @@
+<% content_for :main_content do %>
+    <%= render partial: 'shared/admin_sort' %>
+    <%= render partial: "comment", collection: @comments %>
+<%end%>
