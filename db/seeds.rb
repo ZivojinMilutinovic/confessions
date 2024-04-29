@@ -7,12 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 # db/seeds.rb
 
-# 30.times do
-#   confession = Confession.new
-#   confession.title = Faker::Movie.title
-#   confession.body = Faker::Movie.quote
-#   confession.save!
-# end
+
 
   # confession = Confession.new
   # confession.title = Faker::Movie.title
@@ -51,10 +46,23 @@
   "Forgiveness"
 ]
 
-if Category.count == 0
+if Confession.count.zero?
+  30.times do
+    confession = Confession.new
+    confession.title = Faker::Movie.title
+    confession.body = Faker::Movie.quote
+    confession.save!
+  end
+end
+
+if Category.count.zero?
   categories.each do |c|
     cat = Category.new
     cat.name = c
     cat.save!
   end
+end
+
+if User.where(role: :admin).count.zero?
+  User.create!({:email => "halkatran@gmail.com", :role => :admin, :password => "Kaladontar123!", :password_confirmation => "Kaladontar123!" })
 end
