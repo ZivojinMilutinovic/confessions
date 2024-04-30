@@ -445,7 +445,7 @@ confessions = [
 ]
 
 
-if true
+if Confession.count.zero?
   confessions.each do |c|
     confession = Confession.new
     confession.title = c[:title]
