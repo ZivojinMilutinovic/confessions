@@ -6,6 +6,10 @@ class ConfessionsController < ApplicationController
   end
 
   def index
+    # @confession_ids = session[:confession_ids]
+    # if params[:page].blank?
+    #   @confession_ids = Confession.pluck(:id).shuffle
+    # end
     @confession_id = params[:confession_id].present? ? params[:confession_id].to_i : nil
     result = get_confessions()
     @pagy, @confessions = pagy_countless(result)
@@ -92,6 +96,8 @@ class ConfessionsController < ApplicationController
                 .where(categories: { id: @category_id })
     end
     result = status_filter(result)
+    # result = result.where(id: @confession_ids.take(Pagy::DEFAULT[:items]+1)) # this is needed for randomness
+    # session[:confession_ids] = @confession_ids.drop(Pagy::DEFAULT[:items])
     result = result.where(challenge_id: challenge_id.to_i) if challenge_id.present?
     result = result.where("title ILIKE ?", "%#{title}%") if title.present?
     result = result.order(id: :desc)

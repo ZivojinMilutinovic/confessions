@@ -1,6 +1,6 @@
 <%= form_for(Comment.new, remote: true) do |form| %>
     <%= form.hidden_field :confession_id, value: confession_id %>
-    <%= form.text_area :body, placeholder: 'Add a comment...', class: 'w-full mt-2 p-2 border rounded' %>
+    <%= form.text_area :body, placeholder: 'Add a comment...', class: 'w-full mt-2 p-2 border rounded', required: true %>
     <%= form.submit 'Post Comment', class: 'mt-2 bg-blue-500 text-white p-2 rounded cursor-pointer' %>
 <% end %>
 <br />
