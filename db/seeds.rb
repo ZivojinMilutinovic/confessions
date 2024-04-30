@@ -465,3 +465,56 @@ end
 if User.where(role: :admin).count.zero?
   User.create!({:email => "halkatran@gmail.com", :role => :admin, :password => "Kaladontar123!", :password_confirmation => "Kaladontar123!" })
 end
+
+###### CHALENGES ###############
+
+
+confession_challenge_data = [
+  {
+    title: "Share Your Deepest Fear",
+    description: "Confess your deepest fear anonymously. It's okay to open up and share what scares you.",
+    duration: 7,
+    start_date: Date.today,
+    end_date: Date.today + 7.days
+  },
+  {
+    title: "Confess Your Biggest Regret",
+    description: "Let go of your regrets by confessing them here. You're not alone in feeling remorse.",
+    duration: 10,
+    start_date: Date.today,
+    end_date: Date.today + 10.days
+  },
+  {
+    title: "Share Your Secret Crush",
+    description: "Confess your secret crush anonymously. Sometimes it's liberating to let your feelings out.",
+    duration: 5,
+    start_date: Date.today,
+    end_date: Date.today + 5.days
+  },
+  {
+    title: "Confess Your Guilty Pleasure",
+    description: "Share your guilty pleasure anonymously. It's a safe space to embrace your indulgences without judgment.",
+    duration: 7,
+    start_date: Date.today,
+    end_date: Date.today + 7.days
+  },
+  {
+    title: "Confess Your Innermost Desire",
+    description: "What is your deepest desire? Confess it anonymously and let it out into the world.",
+    duration: 3,
+    start_date: Date.today,
+    end_date: Date.today + 3.days
+  },
+  {
+    title: "Confess Your Most Embarrassing Moment",
+    description: "Embrace vulnerability by confessing your most embarrassing moment anonymously. We've all been there!",
+    duration: 14,
+    start_date: Date.today,
+    end_date: Date.today + 14.days
+  }
+]
+
+# Loop through the confession challenge data and create Challenge records
+confession_challenge_data.each do |challenge_params|
+  Challenge.create!(challenge_params)
+end
