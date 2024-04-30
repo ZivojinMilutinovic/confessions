@@ -48,159 +48,404 @@
 
 confessions = [
   {
-    title: "Feeling Lost in the City",
-    body: "I moved to the big city hoping for adventure, but now I feel more lost than ever before. Everything is moving too fast, and I can't seem to keep up.",
-    category_id: 1
-  },
-  {
-    title: "A Love Triangle Dilemma",
-    body: "Caught in a love triangle, torn between two people I care deeply about. My heart is torn in two, and I don't know how to choose without hurting someone.",
-    category_id: 7
-  },
-  {
-    title: "Struggling to Find Purpose in My Career",
-    body: "My job feels like a dead-end, and I'm questioning whether it's worth it to keep going. I want to find work that fulfills me, but I'm scared to take the leap.",
-    category_id: 3
-  },
-  {
-    title: "The Weight of Regret",
-    body: "Regretting past decisions weighs heavy on my heart. If only I had taken different paths, perhaps things would be better now. But dwelling on the past only brings pain.",
+    title: "Caught Between Dreams and Reality",
+    body: "I'm caught between dreams and reality, struggling to bridge the gap between who I am and who I want to be. How do I turn my aspirations into tangible achievements?",
     category_id: 6
   },
   {
-    title: "Navigating Complex Family Dynamics",
-    body: "Family gatherings are like walking on eggshells, with tensions simmering just beneath the surface. I love them, but sometimes I wish things were simpler.",
-    category_id: 2
+    title: "Drowning in a Sea of Expectations",
+    body: "Expectations drown me, pulling me deeper into a sea of obligations and responsibilities. I fight to keep my head above water, but the weight threatens to drag me under.",
+    category_id: 8
   },
   {
-    title: "Hiding My True Feelings",
-    body: "I put on a smile and pretend everything is okay, but inside, I'm struggling. I'm afraid to show vulnerability, afraid of being judged or rejected.",
+    title: "Haunted by the Echoes of My Past",
+    body: "Echoes of my past haunt me, their whispers a constant reminder of mistakes I can never undo. How do I silence the voices that echo in the corridors of my mind?",
     category_id: 5
   },
   {
-    title: "The Burden of Expectations",
-    body: "Everyone expects so much from me, and I'm tired of trying to live up to their standards. I just want to be myself without feeling like I'm letting everyone down.",
-    category_id: 4
+    title: "Trapped Within the Walls of My Mind",
+    body: "I'm trapped within the walls of my own mind, imprisoned by thoughts that refuse to set me free. How do I break free from the chains of my own creation?",
+    category_id: 9
   },
   {
-    title: "A Secret That Eats Away at Me",
-    body: "I've been keeping a secret for years, and it's eating me up inside. I want to come clean, but I'm terrified of the consequences. How do I move forward?",
+    title: "Torn Between Heart and Duty",
+    body: "My heart pulls me in one direction, duty in another, tearing me apart at the seams. How do I reconcile the two without sacrificing my sense of self?",
+    category_id: 1
+  },
+  {
+    title: "Longing for Authentic Connection",
+    body: "I long for authentic connection in a world of surface-level interactions, craving depth in a sea of shallow relationships. How do I find genuine connections in a society built on pretense?",
+    category_id: 7
+  },
+  {
+    title: "Conforming to Please Others",
+    body: "I conform to please others, molding myself into the shapes they desire. But with every compromise, I lose a piece of who I am. How do I reclaim my identity in a world of expectations?",
     category_id: 10
   },
   {
-    title: "Questioning My Faith",
-    body: "Doubt creeps in, and I find myself questioning everything I once believed. Is it wrong to have doubts? Or is it a natural part of faith?",
-    category_id: 9
-  },
-  {
-    title: "Dealing with Financial Stress",
-    body: "Bills pile up, and I struggle to make ends meet. The weight of financial stress is suffocating, and I feel like I'm drowning in debt.",
-    category_id: 8
-  },
-  {
-    title: "Feeling Trapped in a Toxic Relationship",
-    body: "I'm stuck in a toxic relationship that drains me emotionally and mentally. I know I deserve better, but I'm afraid to leave and start over on my own.",
-    category_id: 1
-  },
-  {
-    title: "Battling Anxiety in Silence",
-    body: "Anxiety grips me like a vice, suffocating and relentless. I put on a brave face, but inside, I'm crumbling. I wish I could talk about it without feeling weak.",
-    category_id: 9
-  },
-  {
-    title: "The Guilt of Parenting Mistakes",
-    body: "As a parent, I make mistakes, but the guilt weighs heavily on me. I want to be the best parent I can be, but sometimes I feel like I'm failing miserably.",
-    category_id: 2
-  },
-  {
-    title: "Dreams Deferred",
-    body: "I had dreams once, but life got in the way. Now, I'm stuck in a mundane routine, wondering what could have been if I had pursued my passions.",
-    category_id: 6
-  },
-  {
-    title: "The Loneliness of Grief",
-    body: "Grief is a lonely road, and I'm walking it alone. The pain of loss never truly fades, and sometimes I wonder if I'll ever find peace again.",
-    category_id: 5
-  },
-  {
-    title: "Holding Onto Resentment",
-    body: "Resentment festers inside me like a wound that refuses to heal. I know I should let go, but it's easier said than done. How do I forgive and move on?",
-    category_id: 7
-  },
-  {
-    title: "Struggling to Fit In",
-    body: "No matter how hard I try, I always feel like I don't belong. I wear a mask to hide my insecurities, but deep down, I long to find my place in the world.",
-    category_id: 8
-  },
-  {
-    title: "The Weight of Expectations",
-    body: "Others see me as successful, but inside, I'm drowning under the weight of expectations. I fear disappointing those who believe in me, but I'm exhausted trying to keep up.",
+    title: "Paralyzed by Fear of Failure",
+    body: "Fear of failure paralyzes me, chaining me to a life of what-ifs and maybes. How do I break free from the shackles of my own insecurities and live boldly?",
     category_id: 3
   },
   {
-    title: "Haunted by Past Trauma",
-    body: "The ghosts of my past haunt me, whispering reminders of pain and trauma. I try to move forward, but the past has a way of catching up when I least expect it.",
+    title: "Seeking Redemption in a World of Sin",
+    body: "I seek redemption in a world stained by sin, yearning for forgiveness for mistakes that stain my soul. Is there grace for the fallen, or am I doomed to carry the burden of my past?",
     category_id: 4
+  },
+  {
+    title: "Desperate for Liberation from Pain's Grasp",
+    body: "I'm desperate for liberation from the grip of pain that binds me to my past. But no matter how fast I run, the memories chase me like relentless shadows. How do I escape the prison of my own making?",
+    category_id: 2
+  },
+  {
+    title: "Feeling Lost in the City",
+    body: "I moved to the city for adventure, but now I feel lost. Everything is moving too fast.",
+    category_id: 1
+  },
+  {
+    title: "Struggling with Identity",
+    body: "I don't know who I am anymore. I feel like I'm living a lie, pretending to be someone I'm not.",
+    category_id: 10
+  },
+  {
+    title: "Desperate for Love",
+    body: "I crave love and affection, but I'm afraid of getting hurt. Is it worth the risk?",
+    category_id: 7
+  },
+  {
+    title: "Dealing with Anxiety",
+    body: "Anxiety consumes me, paralyzing me with fear. I just want to feel normal again.",
+    category_id: 9
+  },
+  {
+    title: "Regretting Past Choices",
+    body: "I made mistakes that I can't undo. If only I could turn back time and make things right.",
+    category_id: 6
+  },
+  {
+    title: "Secrets I Can't Share",
+    body: "I have secrets that I can't tell anyone. They weigh heavily on my conscience.",
+    category_id: 5
   },
   {
     title: "Lost in a Sea of Doubt",
-    body: "Doubt clouds my mind, casting shadows on every decision I make. I second-guess myself constantly, afraid of making the wrong choice and facing the consequences.",
-    category_id: 10
-  },
-  {
-    title: "The Endless Search for Meaning",
-    body: "I search for meaning in a world that feels empty and devoid of purpose. Every day is a struggle to find my place in the chaos.",
-    category_id: 6
-  },
-  {
-    title: "Suffocating Under the Weight of Expectations",
-    body: "Expectations crush me, suffocating any hope of living authentically. I long to break free from the chains of others' ideals and forge my own path.",
-    category_id: 8
-  },
-  {
-    title: "Haunted by the Ghosts of My Past",
-    body: "Ghosts of my past haunt me, tormenting me with memories I wish I could forget. How do I escape the shadows that follow me wherever I go?",
-    category_id: 5
-  },
-  {
-    title: "The Isolation of Mental Illness",
-    body: "Mental illness isolates me, trapping me in a prison of my own mind. I scream for help, but no one hears the silent cries of my broken soul.",
-    category_id: 9
-  },
-  {
-    title: "Torn Between Duty and Desire",
-    body: "Duty pulls me one way, desire another, tearing me apart at the seams. How do I reconcile the two without sacrificing my sense of self?",
-    category_id: 1
-  },
-  {
-    title: "Yearning for Connection in a World of Strangers",
-    body: "I yearn for connection in a world of strangers, craving intimacy in a sea of superficiality. How do I find authentic relationships in a society built on facades?",
-    category_id: 7
-  },
-  {
-    title: "Burying My True Self to Please Others",
-    body: "I bury my true self beneath layers of conformity, afraid to stand out and be judged. But with every mask I wear, I lose a piece of who I am.",
-    category_id: 10
-  },
-  {
-    title: "The Paralyzing Fear of Failure",
-    body: "Fear of failure paralyzes me, trapping me in a cycle of self-doubt and hesitation. How do I break free from the shackles of my own insecurities?",
+    body: "I doubt myself and my abilities. What if I'm not good enough?",
     category_id: 3
   },
   {
-    title: "Yearning for Redemption in a World of Sin",
-    body: "I yearn for redemption in a world tainted by sin, seeking forgiveness for mistakes I can never undo. Is there hope for salvation amidst the darkness?",
+    title: "Facing Financial Struggles",
+    body: "I'm drowning in debt and struggling to make ends meet. Will I ever get ahead?",
+    category_id: 8
+  },
+  {
+    title: "Longing for Acceptance",
+    body: "I feel like I don't belong anywhere. Will I ever find my place in this world?",
+    category_id: 2
+  },
+  {
+    title: "Questioning My Faith",
+    body: "I'm questioning everything I once believed. Is there really a higher power?",
     category_id: 4
   },
   {
-    title: "Desperate for Escape from the Prison of Pain",
-    body: "I long to escape the prison of pain that shackles me to my past. But no matter how far I run, the memories chase me like relentless shadows.",
+    title: "Struggling to Find Purpose",
+    body: "I feel like I'm drifting aimlessly through life. What is my purpose?",
+    category_id: 6
+  },
+  {
+    title: "Feeling Overwhelmed",
+    body: "I have so much on my plate, and I don't know how to handle it all.",
+    category_id: 8
+  },
+  {
+    title: "The Pain of Heartbreak",
+    body: "I thought they were the one, but now my heart is shattered into pieces.",
+    category_id: 1
+  },
+  {
+    title: "Dealing with Depression",
+    body: "Every day is a battle to get out of bed. Will this darkness ever lift?",
+    category_id: 9
+  },
+  {
+    title: "Strained Family Relationships",
+    body: "My family and I don't see eye to eye, and it's tearing me apart.",
     category_id: 2
+  },
+  {
+    title: "Living with Guilt",
+    body: "I did something I'm not proud of, and the guilt eats away at me every day.",
+    category_id: 5
+  },
+  {
+    title: "Feeling Inadequate",
+    body: "No matter how hard I try, I always feel like I'm not good enough.",
+    category_id: 3
+  },
+  {
+    title: "Coping with Loss",
+    body: "The pain of losing someone I love is unbearable. How do I go on?",
+    category_id: 4
+  },
+  {
+    title: "Seeking Approval",
+    body: "I crave validation from others, but it never feels like enough.",
+    category_id: 7
+  },
+  {
+    title: "Struggling with Self-Worth",
+    body: "I don't value myself the way I should. How do I learn to love myself?",
+    category_id: 10
+  },
+  {
+    title: "Feeling Stuck in a Rut",
+    body: "Every day feels like a repeat of the last. How do I break free from this cycle?",
+    category_id: 6
+  },
+  {
+    title: "Struggling to Express Myself",
+    body: "I have so much to say, but I don't know how to put it into words.",
+    category_id: 10
+  },
+  {
+    title: "Desperate for Attention",
+    body: "I crave attention and validation from others, but it never feels like enough.",
+    category_id: 7
+  },
+  {
+    title: "Constantly Worrying About the Future",
+    body: "The uncertainty of what's to come keeps me up at night. What will tomorrow bring?",
+    category_id: 9
+  },
+  {
+    title: "Feeling Disconnected from Others",
+    body: "I have friends, but I still feel lonely. Why do I feel so disconnected?",
+    category_id: 2
+  },
+  {
+    title: "Haunted by Past Mistakes",
+    body: "I made choices I regret, and they haunt me every day. Will I ever find peace?",
+    category_id: 5
+  },
+  {
+    title: "Struggling to Find Motivation",
+    body: "I want to do more with my life, but I can't seem to find the motivation to start.",
+    category_id: 3
+  },
+  {
+    title: "Coping with Grief",
+    body: "The loss of a loved one leaves a hole in my heart that can never be filled.",
+    category_id: 4
+  },
+  {
+    title: "Yearning for Acceptance",
+    body: "I try to fit in, but I always feel like an outsider. Will I ever be accepted for who I am?",
+    category_id: 1
+  },
+  {
+    title: "Feeling Overwhelmed by Responsibilities",
+    body: "There's so much on my plate, and I don't know how to juggle it all.",
+    category_id: 8
+  },
+  {
+    title: "Questioning Traditional Gender Roles",
+    body: "I don't conform to society's expectations of gender. Why should I be limited by outdated norms?",
+    category_id: 10
+  },
+  {
+    title: "Controversial Political Views",
+    body: "I hold political views that many consider extreme. Why should I apologize for speaking my mind?",
+    category_id: 8
+  },
+  {
+    title: "Exploring Non-Monogamous Relationships",
+    body: "I'm in a non-monogamous relationship and I'm happier than ever. Why should society dictate who I love?",
+    category_id: 1
+  },
+  {
+    title: "Validity of Mental Illness",
+    body: "I believe mental illness is just a societal construct. Can't people just toughen up?",
+    category_id: 9
+  },
+  {
+    title: "Controversial Social Movements",
+    body: "I support social movements that others deem radical. Why should I stay silent when I see injustice?",
+    category_id: 7
+  },
+  {
+    title: "Defending Unpopular Lifestyle Choices",
+    body: "I live a lifestyle that many find unconventional. Why should I conform to societal norms if it doesn't make me happy?",
+    category_id: 2
+  },
+  {
+    title: "Expressing Skepticism Towards Climate Change",
+    body: "I'm skeptical about climate change and believe it's overblown. Can't we focus on more pressing issues?",
+    category_id: 3
+  },
+  {
+    title: "Value of Education",
+    body: "I dropped out of school and I'm doing just fine. Is a traditional education really necessary for success?",
+    category_id: 6
+  },
+  {
+    title: "Challenging the Notion of Consent",
+    body: "I believe consent is overemphasized and takes the fun out of relationships. Can't people just go with the flow?",
+    category_id: 5
+  },
+  {
+    title: "Questioning Vaccination Safety",
+    body: "I'm skeptical about the safety of vaccines and believe they may cause harm. Why should I trust pharmaceutical companies?",
+    category_id: 9
+  },
+  {
+    title: "Gun Ownership",
+    body: "I believe in the right to bear arms and think gun control laws are unnecessary. Why should law-abiding citizens be punished for the actions of a few?",
+    category_id: 8
+  },
+  {
+    title: "Controversial Speech",
+    body: "I believe in free speech, even if it means defending views I find offensive. Why should we silence dissenting voices?",
+    category_id: 7
+  },
+  {
+    title: "Validity of Climate Change",
+    body: "I'm skeptical about climate change and believe it's a natural cycle. Can we really trust the data?",
+    category_id: 3
+  },
+  {
+    title: "Legalizing Drugs",
+    body: "I support the legalization of drugs and think the war on drugs has failed. Why should the government dictate what we can put in our bodies?",
+    category_id: 10
+  },
+  {
+    title: "Challenging Affirmative Action",
+    body: "I believe affirmative action discriminates against qualified candidates based on race. Isn't it reverse discrimination?",
+    category_id: 6
+  },
+  {
+    title: "Value of Marriage",
+    body: "I don't believe in marriage and think it's an outdated institution. Why should love be bound by a legal contract?",
+    category_id: 1
+  },
+  {
+    title: "Animal Testing",
+    body: "I support animal testing for scientific research and believe it's necessary for medical advancement. Why prioritize animal lives over human health?",
+    category_id: 4
+  },
+  {
+    title: "Effectiveness of Affirmative Action",
+    body: "I'm skeptical about the effectiveness of affirmative action in promoting diversity. Shouldn't merit be the primary factor in hiring decisions?",
+    category_id: 8
+  },
+  {
+    title: "Controversial Immigration Policies",
+    body: "I believe in strict immigration policies to protect our borders. Why should we allow unchecked migration?",
+    category_id: 7
+  },
+  {
+    title: "Ethics of Animal Testing",
+    body: "I struggle with the morality of animal testing for scientific research. Can we justify the suffering of sentient beings for human benefit?",
+    category_id: 4
+  },
+  {
+    title: "Privacy Over National Security",
+    body: "I believe in prioritizing individual privacy rights over national security measures. Why should we sacrifice our freedoms in the name of safety?",
+    category_id: 8
+  },
+  {
+    title: "Challenging Cultural Appropriation",
+    body: "I question the notion of cultural appropriation and think it's often blown out of proportion. Can't we appreciate and borrow from other cultures without fear of backlash?",
+    category_id: 10
+  },
+  {
+    title: "Legalizing Sex Work",
+    body: "I support the legalization of sex work and believe it's a matter of workers' rights and safety. Why should consensual adult activities be criminalized?",
+    category_id: 1
+  },
+  {
+    title: "Questioning Affirmative Action in College Admissions",
+    body: "I'm skeptical about the fairness of affirmative action in college admissions. Shouldn't admission be based solely on merit?",
+    category_id: 6
+  },
+  {
+    title: "Euthanasia Rights",
+    body: "I believe in the right to die with dignity and support euthanasia for terminally ill patients. Why should suffering be prolonged against one's will?",
+    category_id: 9
+  },
+  {
+    title: "Challenging Traditional Gender Norms",
+    body: "I reject traditional gender norms and believe individuals should express themselves freely. Why should society dictate how we identify and present ourselves?",
+    category_id: 2
+  },
+  {
+    title: "Controversial Immigration Policies",
+    body: "I believe in strict immigration policies to protect our borders. Why should we allow unchecked migration?",
+    category_id: 7
+  },
+  {
+    title: "Legality of Surveillance",
+    body: "I question the legality of mass surveillance by governments. Shouldn't privacy be a fundamental right?",
+    category_id: 8
+  },
+  {
+    title: "Prison Reform",
+    body: "I support reforming the prison system to focus on rehabilitation rather than punishment. Why should incarceration perpetuate cycles of violence and injustice?",
+    category_id: 3
+  },
+  {
+    title: "Questioning the Ethics of Genetic Engineering",
+    body: "I'm skeptical about the morality of genetic engineering and its potential consequences. Should we play with the building blocks of life?",
+    category_id: 4
+  },
+  {
+    title: "Reproductive Rights",
+    body: "I support a person's right to choose when it comes to reproductive health. Why should decisions about my body be regulated by others?",
+    category_id: 9
+  },
+  {
+    title: "Challenging the Education System",
+    body: "I question the effectiveness of traditional education methods and advocate for more innovative approaches. Can't we better prepare students for the challenges of the modern world?",
+    category_id: 6
+  },
+  {
+    title: "the Legalization of Assisted Suicide",
+    body: "I believe in the right to die on one's own terms and support assisted suicide for terminally ill individuals. Why should we prolong suffering when there's no hope for recovery?",
+    category_id: 1
+  },
+  {
+    title: "Questioning the Role of Police in Society",
+    body: "I'm skeptical about the role of police in society and believe in reallocating resources to address root causes of crime. Can't we reimagine public safety without relying on law enforcement?",
+    category_id: 8
+  },
+  {
+    title: "Universal Basic Income",
+    body: "I support the idea of universal basic income to address economic inequality and provide financial security for all citizens. Why should poverty be a barrier to a dignified life?",
+    category_id: 3
+  },
+  {
+    title: "Challenging Traditional Marriage Norms",
+    body: "I question the institution of marriage and believe in redefining relationships based on individual preferences. Why should love be bound by legal contracts?",
+    category_id: 2
+  },
+  {
+    title: "Decriminalization of Drug Use",
+    body: "I believe in decriminalizing drug use and treating addiction as a public health issue rather than a criminal offense. Why should drug users be punished instead of receiving help?",
+    category_id: 10
+  },
+  {
+    title: "Questioning the Ethics of Zoos",
+    body: "I'm skeptical about the ethics of keeping animals in zoos for human entertainment. Should we prioritize animal welfare over our own amusement?",
+    category_id: 5
+  },
+  {
+    title: "Legalization of Prostitution",
+    body: "I support the legalization of prostitution to ensure the safety and rights of sex workers. Why should consensual adult activities be criminalized?",
+    category_id: 7
   }
 ]
 
 
-if Confession.count.zero?
+if true
   confessions.each do |c|
     confession = Confession.new
     confession.title = c[:title]
