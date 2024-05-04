@@ -445,20 +445,20 @@ confessions = [
 ]
 
 
+if Category.count.zero?
+  categories.each do |c|
+    cat = Category.new
+    cat.name = c
+    cat.save!
+  end
+end
+
 if Confession.count.zero?
   confessions.each do |c|
     confession = Confession.new
     confession.title = c[:title]
     confession.body = c[:body]
     confession.confession_categories.create(category_id: c[:category_id]) if confession.save
-  end
-end
-
-if Category.count.zero?
-  categories.each do |c|
-    cat = Category.new
-    cat.name = c
-    cat.save!
   end
 end
 

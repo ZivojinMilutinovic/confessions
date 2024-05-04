@@ -42,7 +42,12 @@
             </div>
         </div>
         <div  data-confessions-target="comments" class = "hidden mt-2">
-                <%= render partial: 'comments/new_comment_form', locals: { confession_id: confession.id } %>
+                <form data-confessions-target="newCommentForm" action="/comments" method="post" data-remote="true">
+                    <input type="hidden" name="comment[confession_id]" value="<%= confession.id %>">
+                    <textarea name="comment[body]" placeholder="Add a comment..." class="w-full mt-2 p-2 border rounded" required></textarea>
+                    <button type="button" class="mt-2 bg-blue-500 text-white p-2 rounded cursor-pointer" data-action="click->confessions#postComment">Post comment</button>
+                </form>
+                <br />
                 <div id = "<%= 'comments_' + confession.id.to_s %>">
                         <%= render 'shared/spinner' %>
                 </div>

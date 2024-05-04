@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 const COMMENTS = "comments";
 const CONFESSIONS = "confessions";
 export default class extends Controller {
-    static targets = ['comments'];
+    static targets = ['comments', 'newCommentForm'];
 
     initialize() {
       this.commentsOpened = false;
@@ -246,4 +246,38 @@ export default class extends Controller {
       //remove dislike
       this.fetchLikesDislikes(confessionId, { dislikes: -1 }, methodToCall)
     }
+
+    postComment(event){
+      const clickedButton = event.currentTarget;
+      clickedButton.disabled = true;
+      const formData =  new FormData(this.newCommentFormTarget);
+      const csrfToken = document.querySelector("meta[name=csrf-token]").content;
+      fetch(this.newCommentFormTarget.action, {
+          method: this.newCommentFormTarget.method,
+          body: formData,
+          headers: {
+              "X-Requested-With": "XMLHttpRequest",
+              "X-CSRF-Token": csrfToken,
+          }
+        })
+        .then(response => {
+          // Re-enable the submit button when the fetch completes
+          clickedButton.disabled = false;
+          this.newCommentFormTarget.reset();
+          return response.json();
+        })
+        .then(data => {
+          // Handle the response data as needed
+          if(data["status"] == "success"){
+            const confessionId = formData.get("comment[confession_id]");
+            this.fetchComments(confessionId);
+          }
+        })
+        .catch(error => {
+          // Re-enable the submit button if there's an error
+          clickedButton.disabled = false;
+          this.newCommentFormTarget.reset();
+          console.error('Error:', error);
+        });
+      };
   }

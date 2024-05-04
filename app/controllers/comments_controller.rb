@@ -3,11 +3,10 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
+      render json: { status: 'success', comment: @comment }, status: :created
     else
-      puts @comment.errors
+      render json: { status: 'error', message: @comment.errors.full_messages }, status: :unprocessable_entity
     end
-
-    redirect_to confessions_path
   end
 
   def index
